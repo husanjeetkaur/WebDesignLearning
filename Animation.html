@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Animations</title>
+
+    <style>
+        .box {
+            background-color: black;
+            color: seashell;
+            height: 55px;
+            width: 100px;
+            text-align: center;
+            animation: box 2s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes box {
+            0% {
+                width: 200px;
+            }
+
+            100% {
+                width: 300px;
+            }
+
+        }
+
+        .ease {
+            animation-timing-function: ease;
+        }
+
+        .easIn {
+            animation-timing-function: ease-in;
+        }
+
+        .easeOut {
+            animation-timing-function: ease-out;
+        }
+
+        .easeInOut {
+            animation-timing-function: ease-in-out;
+        }
+
+        .stepStart {
+            animation-timing-function: step-start;
+        }
+
+        .stepEnd {
+            animation-timing-function: step-end;
+        }
+
+        .steps {
+            animation-timing-function: steps(4);
+        }
+
+        .cubicBezier {
+            animation-timing-function: cubic-bezier(0.1 1.0 0.7 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class=" box ease">Ease </div><br />
+        <div class="box easeIn">Ease-In </div><br />
+        <div class="box easeOut">Ease-Out </div><br />
+        <div class="box easeInOut">Ease-In-Out</div><br />
+        <div class="box stepStart">Step-Start</div><br />
+        <div class="box stepEnd">Step-End</div><br />
+        <div class="box steps">Steps</div><br />
+        <div class="box cubicBezier">Cubic Bezier</div><br />
+    </div>
+</body>
+
+</html>

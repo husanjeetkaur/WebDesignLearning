@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Practice4</title>
+    <style>
+        body {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            margin: 0;
+        }
+
+        .card {
+            text-align: center;
+            height: 400px;
+            width: 400px;
+            background: url('../images/1.jpg');
+            background-position: center;
+            background-size: cover;
+            padding: 0;
+            transform-style: preserve-3d;
+            transition: transform 3s;
+            box-sizing: border-box;
+            border: 15px ridge grey;
+            position: relative;
+            left: -50%;
+
+        }
+
+        #cardFront {
+            transform: perspective(800px) translateY(60px) translateZ(60px);
+            font-size: 40px;
+            background-image: url('../images/backgroundGIF1.gif');
+            background-clip: text;
+            -webkit-background-clip: text;
+            background-position: center;
+            color: transparent;
+        }
+
+        #cardBack {
+            transform: rotateY(180deg) translateZ(30px);
+            padding: 0px;
+        }
+
+        .card:hover {
+            transform: rotateY(180deg);
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <div id="cardFront">
+            <h1>HUSAN</h1>
+        </div>
+        <div id="cardBack">
+            <h3>I am Proud that and I am Learning something everyday and implementing it as well.
+        </div>
+        </h3>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Transition</title>
+
+    <style>
+        .box {
+            height: 50px;
+            width: 100px;
+            background-color: brown;
+            transition: width 5s;
+        }
+
+        .ease {
+            transition-timing-function: ease;
+        }
+
+        .easIn {
+            transition-timing-function: ease-in;
+        }
+
+        .easeOut {
+            transition-timing-function: ease-out;
+        }
+
+        .easeInOut {
+            transition-timing-function: ease-in-out;
+        }
+
+        .stepStart {
+            transition-timing-function: step-start;
+        }
+
+        .stepEnd {
+            transition-timing-function: step-end;
+        }
+
+        .steps {
+            transition-timing-function: steps(4);
+        }
+
+        .cubicBezier {
+            transition-timing-function: cubic-bezier(0.1 1.0 0.7 0.1);
+        }
+
+        .container:hover .box {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class=" box ease">Ease </div><br />
+        <div class="box easeIn">Ease-In </div><br />
+        <div class="box easeOut">Ease-Out </div><br />
+        <div class="box easeInOut">Ease-In-Out</div><br />
+        <div class="box stepStart">Step-Start</div><br />
+        <div class="box stepEnd">Step-End</div><br />
+        <div class="box steps">Steps</div><br />
+        <div class="box cubicBezier">Cubic Bezier</div><br />
+    </div>
+</body>
+
+</html>

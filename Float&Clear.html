@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Overflow</title>
+
+    <style>
+        * {
+            border: 1px solid black;
+            margin: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        /* Without Clear Property*/
+        .one {
+            float: left;
+            width: 500px;
+            background-color: chartreuse;
+        }
+
+        floas float .two {
+            float: right;
+            width: 500px;
+            background-color: cornflowerblue;
+        }
+
+        .three {
+            background-color: brown;
+        }
+
+        .three img {
+            width: 300px;
+            height: 300px
+        }
+
+        /*With Clear Property*/
+
+        .oneC {
+            float: left;
+            width: 500px;
+            background-color: rgb(238, 255, 0);
+        }
+
+        .twoC {
+            float: right;
+            width: 500px;
+            background-color: rgb(237, 100, 100);
+        }
+
+        .threeC {
+            background-color: purple;
+            clear: both;
+        }
+
+        .threeC img {
+            width: 300px;
+            height: 300px
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Before Using Clear Property</h1>
+    <div class="one">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet asperiores quisquam obcaecati alias, excepturi
+            placeat molestiae! Illum consequuntur perspiciatis enim quos accusamus laudantium sed! Sed, sunt omnis quam
+            id distinctio, esse quae error facilis cum labore enim pariatur accusantium doloribus ea aut quo, voluptate
+            vitae adipisci minima deleniti nihil temporibus. Labore ea provident natus pariatur! At, reprehenderit nemo!
+            Inventore doloribus deleniti aperiam nesciunt corporis minima excepturi asperiores facere velit iure iusto
+            accusamus consequuntur cupiditate laudantium placeat expedita, nostrum incidunt saepe debitis voluptatem
+            sint perferendis! Saepe illo quos distinctio, ducimus placeat cumque accusantium nostrum porro animi dolores
+            accusamus suscipit, alias consequuntur.</p>
+    </div>
+    <div class="two">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates iusto neque dolorum molestiae atque
+            consequuntur? Deleniti quam dolore architecto perferendis ullam, vero nobis blanditiis obcaecati iusto
+            facere voluptas dolorum odio id harum laudantium placeat sit cupiditate, quibusdam enim modi sequi
+            consequatur. Aliquam enim, quasi recusandae quisquam cumque doloribus eos maxime consequuntur id vel?
+            Possimus autem tenetur eligendi aliquid ex, ab voluptatem. Perferendis sint ipsum, nobis quis consequatur
+            dicta harum possimus quam nulla nesciunt facilis, atque enim impedit aperiam autem. Reiciendis consequatur
+            nam accusamus consectetur, ab possimus ex, placeat, quidem maiores laborum qui at obcaecati. Nemo natus nam
+            provident quibusdam optio!</p>
+    </div>
+    <div class="three">
+        <img src="Images/dog.jpg">
+    </div>
+
+    <br /><br />
+    <hr />
+    <br /><br />
+    <h1>After Using Clear Property</h1>
+    <div class="oneC">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet asperiores quisquam obcaecati alias, excepturi
+            placeat molestiae! Illum consequuntur perspiciatis enim quos accusamus laudantium sed! Sed, sunt omnis quam
+            id distinctio, esse quae error facilis cum labore enim pariatur accusantium doloribus ea aut quo, voluptate
+            vitae adipisci minima deleniti nihil temporibus. Labore ea provident natus pariatur! At, reprehenderit nemo!
+            Inventore doloribus deleniti aperiam nesciunt corporis minima excepturi asperiores facere velit iure iusto
+            accusamus consequuntur cupiditate laudantium placeat expedita, nostrum incidunt saepe debitis voluptatem
+            sint perferendis! Saepe illo quos distinctio, ducimus placeat cumque accusantium nostrum porro animi dolores
+            accusamus suscipit, alias consequuntur.</p>
+    </div>
+    <div class="twoC">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates iusto neque dolorum molestiae atque
+            consequuntur? Deleniti quam dolore architecto perferendis ullam, vero nobis blanditiis obcaecati iusto
+            facere voluptas dolorum odio id harum laudantium placeat sit cupiditate, quibusdam enim modi sequi
+            consequatur. Aliquam enim, quasi recusandae quisquam cumque doloribus eos maxime consequuntur id vel?
+            Possimus autem tenetur eligendi aliquid ex, ab voluptatem. Perferendis sint ipsum, nobis quis consequatur
+            dicta harum possimus quam nulla nesciunt facilis, atque enim impedit aperiam autem. Reiciendis consequatur
+            nam accusamus consectetur, ab possimus ex, placeat, quidem maiores laborum qui at obcaecati. Nemo natus nam
+            provident quibusdam optio!</p>
+    </div>
+    <div class="threeC">
+        <img src="Images/dog.jpg">
+    </div>
+</body>
+
+</html>

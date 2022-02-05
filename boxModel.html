@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Box Model</title>
+
+    <style>
+        img {
+            height: 300px;
+            width: 300px;
+            background-color: brown;
+            padding: 5px;
+            border-width: 0px 10px 0px 10px;
+            border-color: olive;
+            border-style: ridge;
+            margin: 20px;
+        }
+
+        .withBorderSizing {
+            box-sizing: border-box;
+        }
+
+        img:hover {
+            border-width: 10px;
+            border-color: orchid;
+            background-color: palegreen;
+        }
+
+        #backgroundClip {
+            background-image: url('images/backgroundGIF1.gif');
+            background-size: cover;
+            background-position: center;
+            font-size: 100px;
+            text-align: center;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Box-Sizing Property</h1>
+    <img class="withoutBorderSizing" src="images/dog.jpg" />
+    <img class="withBorderSizing" src="images/dog.jpg" />
+
+    <h1 id="backgroundClip"> Background Clip</h1>
+</body>
+
+</html>

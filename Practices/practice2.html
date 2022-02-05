@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Practice2</title>
+
+    <style>
+        #use {
+
+
+            transform: scale(1, 0.5) skewX(40deg) translate(-150px, 140px);
+        }
+    </style>
+</head>
+
+<body>
+    <svg height="800px" width="800px">
+        <g fill="grey" transform="rotate(-10 50 100 ) skewX(40) translate(-190 110) scale(1 0.5)">
+            <path id="heart"
+                d="M 100 130 A 20 20 0 0 1 150 130 A 20 20 0 0 1 200 130 Q 200 160 150 190 Q 100 160 100 130 z">
+            </path>
+        </g>
+        <use xlink:href="#heart" style="stroke:red; fill:none; stroke-width:3px;">
+        </use>
+
+    </svg>
+</body>
+
+</html>

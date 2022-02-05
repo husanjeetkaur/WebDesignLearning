@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Selectors</title>
+
+    <style>
+        div {
+            margin: 20vw;
+        }
+
+        legend {
+            font-size: 2em;
+        }
+
+        input[type="checkbox"] {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form>
+            <fieldset>
+                <legend name="FormHeader">Change Request Form </legend>
+                <label>Complete this change request form to submit any updates you would like to make to a
+                    project.</label><br /><br />
+
+                <label for="ProjectName">Name of project</label><br />
+                <input type="text" id="ProjectName"><br /><br />
+
+                <label for="Requester" required>Change Requester<br />
+                    <input type="text" class="Requester" placeholder="First Name">
+                    <input type="text" class="Requester" placeholder="Last Name">
+                </label><br /><br />
+
+                <label for="Email">Email</label><br />
+                <input type="email" id="email"><br /><br />
+
+                <lable>Change Details</lable><br /><br />
+
+                <lable for="Type">Change Type</lable><br /><br />
+                <input type="checkbox" id="one" name="type"><label for="one"> Scope</label>
+                <input type="checkbox" id="two" name="type"><label for="two"> Risk</label>
+                <input type="checkbox" id="three" name="type"><label for="three"> Cost</label><br /><br />
+                <input type="checkbox" id="four" name="type"><label for="four"> Communications</label>
+                <input type="checkbox" id="five" name="type"><label for="five"> Quality</label>
+                <input type="checkbox" id="six" name="type"><label for="six"> Time</label><br /><br />
+
+                <label for="proposedChanges">Proposed Changes</label><br />
+                <textarea id="proposedChanges" rows="5" cols="100" required></textarea><br /><br />
+
+                <label for="reasons">Reasons you want the specified details changed</label><br />
+                <textarea id="reasons" rows="5" cols="100" required></textarea><br /><br />
+
+                <label for="impact">Change impact</label><br />
+                <textarea id="impact" rows="5" cols="100" required></textarea><br /><br />
+
+                <label for="URL">Documentation URL</label><br />
+                <input type="url" id="URL"><br /><br />
+
+                <label for="sign">Signature</label><br /><br />
+                <input type="text"
+                    style="border-top:none; border-left: none; border-right:none; outline: 1px solid black; outline-offset: 4px; padding: 20px;"
+                    size="100"><br /><br />
+
+                <input type="submit" id="submit" value="Send Chnages Request">
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
