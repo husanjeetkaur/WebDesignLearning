@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+
+header{
+
+    background-color:#427157;
+
+    display: flex;
+    align-items: center;
+
+}
+a{
+    text-decoration: none;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+}
+header ul .item{
+    justify-content: space-between;
+
+}
+#logo{
+    margin-right: auto;
+    padding: 10px;
+    margin-left: 20px;
+    font-weight: 900;
+}
+#logo  a{
+    font-size: 3.5em;
+    background-image: url('../images/backgroundGIF1.gif');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+#menu li{
+    padding: 15px;
+    justify-content: space-around;
+
+}
+#menu li a{
+    font-size: 1.5em;
+    color:#f9e6e6;
+}
+main{
+    background-image: url(../Images/Art1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 100vw;
+    flex-grow: 3;
+    justify-content: space-around;
+}
+
+main h1{
+    align-self: center;
+    font-size: 4em;
+    color:#427157;
+    text-shadow: 5px 2px black;
+
+}
+
+#AboutUs{
+    margin: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+
+
+}
+
+.section{
+    border:5px ridge gray;
+    flex-basis: 35%;
+    max-width: 370px;
+    height: 500px;
+    max-height: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    transform-style: preserve-3d;
+    transition: transform 2s;
+
+
+}
+.section:hover{
+    transform: rotateY(180deg);
+}
+.section1{
+    width: 100%;
+    background: url("../Images/Draw.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.section2{
+    width: 100%;
+    background: url("../Images/Painting.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.section p, button{
+    align-self: center;
+    transform:  rotateY(180deg) translateZ(-30px) ;
+
+
+}
+
+
+
+
+
+
+
+
+
