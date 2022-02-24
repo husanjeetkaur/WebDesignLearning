@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text</title>
+
+    <style>
+        body {
+            background-color: #002147;
+
+        }
+
+        .txt {
+
+            font-size: 5em;
+            position: relative;
+            transform: translate(30%, 50%);
+
+        }
+
+        .txt h2 {
+            color: yellow;
+            position: absolute;
+        }
+
+        .txt h2:nth-child(1) {
+            color: transparent;
+            -webkit-text-stroke: 2px darkgreen;
+        }
+
+        .txt h2:nth-child(2) {
+            color: darkgreen;
+            animation: animate 4s ease-in-out infinite;
+        }
+
+        @keyframes animate {
+
+            0%,
+            100% {
+                clip-path: polygon(0 46%, 18% 46%, 36% 50%, 52% 56%, 69% 61%, 85% 59%, 100% 51%, 100% 100%, 0 100%);
+            }
+
+            50% {
+                clip-path: polygon(0 54%, 17% 61%, 32% 65%, 49% 63%, 65% 55%, 83% 47%, 100% 46%, 100% 100%, 0 100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="txt">
+        <h2>Husan</h2>
+        <h2>Husan</h2>
+    </div>
+</body>
+
+</html>
