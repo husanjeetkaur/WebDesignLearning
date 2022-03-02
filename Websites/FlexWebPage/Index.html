@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/flex.css">
+
+    <script src="https://kit.fontawesome.com/d1b708c462.js" crossorigin="anonymous"></script>
+
+    <title>Flex WebPage</title>
+</head>
+
+<body>
+
+    <nav class="nav">
+        <input type="checkbox" class="nav_checkbox" id="nav_checkbox">
+        <label for="nav_checkbox" class="nav_toggle">
+            <i class="fa-solid fa-xmark" id="close"></i>
+            <i class="fa-solid fa-bars" id="bars"></i>
+        </label>
+
+        <ul class="nav_menu">
+            <li>
+                <a id="logo" href="#">
+                    <h2>Art</h2>
+                    <h2>Art</h2>
+                </a>
+            </li>
+            <li><a href="#" class="navitem item1">Home</a></li>
+            <li><a href="#AboutUs" class="navitem item2">About Us</a></li>
+            <li><a href="#Gallery" class="navitem item3">Gallery</a></li>
+            <li><a href="#Contact" class="navitem item4">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="welcomePage">
+        <h2>Welcome to the Art World</h2>
+    </div>
+    <div class="heading">What We Do</div>
+
+    <div id="AboutUs">
+
+        <div class="section ">
+            <div class="front">
+                <h1>Drawing</h1>
+                <img src="Images/draw.jpg" alt="">
+            </div>
+
+            <div class="back">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus unde cum explicabo, vitae
+                    nesciunt, reiciendis quas eligendi atque sapiente voluptatibus eum deserunt quae. Dignissimos quos
+                    tenetur porro obcaecati ipsam accusamus ab iure veniam dolorem autem nihil vitae eos odio quis,
+                    iusto id, consequatur veritatis ipsa, corporis quo! Nesciunt, est?</p>
+                <button type="button" id="read1" onclick="readMore()">Read More</button>
+            </div>
+        </div>
+        <div class="section ">
+            <div class="front">
+                <h1>Painting</h1>
+                <img src="Images/Painting.jpg" alt="">
+            </div>
+
+            <div class="back">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus unde cum explicabo, vitae
+                    nesciunt, reiciendis quas eligendi atque sapiente voluptatibus eum deserunt quae. Dignissimos quos
+                    tenetur porro obcaecati ipsam accusamus ab iure veniam dolorem autem nihil vitae eos odio quis,
+                    iusto id, consequatur veritatis ipsa, corporis quo! Nesciunt, est?</p>
+                <button type="button" id="read2" onclick="readMore1()">Read More</button>
+            </div>
+        </div>
+    </div>
+    <div class="pop-up" id="pop-up1">
+        <div class="content">
+            <span class="close" id="close1">&times;</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus unde
+                cum explicabo, vitae
+                nesciunt, reiciendis quas eligendi atque sapiente voluptatibus eum deserunt quae.
+                Dignissimos
+                quos
+                tenetur porro obcaecati ipsam accusamus ab iure veniam dolorem autem nihil vitae eos odio
+                quis,
+                iusto id, consequatur veritatis ipsa, corporis quo! Nesciunt, est? Eos
+                quas temporibus ea omnis nemo
+                veniam cumque atque. Voluptas enim illo sint nobis omnis, mollitia autem amet recusandae
+                rerum
+                delectus inventore quis laboriosam, minus commodi possimus quo dolorem, adipisci libero
+                ipsum
+                excepturi culpa voluptatem. Quisquam esse laborum ullam nesciunt, animi, error iure at natus
+                sint
+                maxime incidunt modi nemo veniam.</p>
+        </div>
+    </div>
+    <div class="pop-up" id="pop-up2">
+        <div class="content">
+            <span class="close" id="close2">&times;</span>
+            <p>ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus unde
+                cum explicabo, vitae
+                nesciunt, reiciendis quas eligendi atque sapiente voluptatibus eum deserunt quae.
+                Dignissimos
+                quos
+                tenetur porro obcaecati ipsam accusamus ab iure veniam dolorem autem nihil vitae eos odio
+                quis,
+                iusto id, consequatur veritatis ipsa, corporis quo! Nesciunt, est? Eos
+                quas temporibus ea omnis nemo
+                veniam cumque atque. Voluptas enim illo sint nobis omnis, mollitia autem amet recusandae
+                rerum
+                delectus inventore quis laboriosam, minus commodi possimus quo dolorem, adipisci libero
+                ipsum
+                excepturi culpa voluptatem. Quisquam esse laborum ullam nesciunt, animi, error iure at natus
+                sint
+                maxime incidunt modi nemo veniam.</p>
+        </div>
+    </div>
+
+    <!--Gallery-->
+    <div id="Gallery">
+
+        <h1 class="heading">Gallery</h1>
+        <div class="select">
+            <button type="button" class="selectAll" onclick="All()">All</button>
+            <button type="button" class="selectPainting" onclick="painting()">Painting</button>
+            <button type="button" class="selectDrawing" onclick="draw()">Drawing</button>
+        </div>
+
+        <div class="Gal-img">
+
+            <div class="one gallery">
+                <div class="gallery-section item1"><img src="Images/item1.jpg" alt="">
+                    <div class="overley">
+                        <h1>Portrait Painting</h1>
+                    </div>
+                </div>
+                <div class="gallery-section item2"><img src="Images/item2.jpg" alt="">
+                    <div class="overley">
+                        <h1>Standing Girl Painting</h1>
+                    </div>
+                </div>
+                <div class="gallery-section item3"><img src="Images/item3.jpeg" alt="">
+                    <div class="overley">
+                        <h1>Landscape Painting</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="two gallery">
+                <div class="gallery-section item4"><img src="Images/item4.jpg" alt="">
+                    <div class="overley">
+                        <h1>Doodle</h1>
+                    </div>
+                </div>
+                <div class="gallery-section item5"><img src="Images/item5.jpg" alt="">
+                    <div class="overley">
+                        <h1>Family Portrait</h1>
+                    </div>
+                </div>
+                <div class="gallery-section item6"><img src="Images/item6.jpg" alt="">
+                    <div class="overley">
+                        <h1>Doodle</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="three gallery">
+                <div class="gallery-section item7"><img src="Images/item7.jpg" alt="">
+                    <div class="overley">
+                        <h1>Dress Scetches</h1>
+                    </div>
+                </div>
+                <div class="gallery-section item8"><img src="Images/item8.jpg" alt="">
+                    <div class=" overley">
+                        <h1>Animal Drawing</h1>
+                    </div>
+                </div>
+                <div class="gallery-section item9"><img src="Images/item9.jpg" alt="">
+                    <div class="overley">
+                        <h1>Anime Drawing</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-us">
+        <div class="heading" id="Contact">Contact Us</div>
+        <form method="post">
+            <div class="contact-section">
+                <div class=" section-one">
+                    <label class="required" for="name">Name:</label><br />
+                    <input type="text" placeholder="First Name" required />
+                    <input type="text" placeholder="Last Name" required /><br />
+
+                    <label class="required" for="email">Email:</label><br />
+                    <input type="email" placeholder="Email" required /><br />
+
+                    <label class="required" for="phoneNumber">Phone:</label><br />
+                    <input type="tel" pattren="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone Number" required>
+                </div>
+                <div class="section-two">
+                    <label for="message">Message:</label><br />
+                    <textarea name="" id="" rows="10" placeholder="Write your Message..."></textarea>
+                </div>
+            </div>
+
+            <div class="submit">
+                <button class="contact-button" type="submit" onclick="validation()" target="_blank">Save</button>
+
+            </div>
+        </form>
+    </div>
+
+    <div class="footer">
+        <div class="copyright">
+            <h3>Copyright © 2022 Art</h3>
+        </div>
+        <div class="icons">
+            <ul>
+                <li><a href=""><i class="fa-brands fa-facebook-f "></i></a></li>
+                <li><a href=""><i class="fa-brands fa-twitter "></i></a></li>
+                <li><a href=""><i class="fa-brands fa-google-plus-g "></i></a></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <!-- Bottom to Top Icon-->
+
+    <div><a href="#" class="scrollTop"><i class="fa-solid fa-arrow-up fa-2x"></i></a></div>
+
+    <!-- JS -->
+    <script>
+        /* Menu */
+
+        function menu() {
+            var x = document.getElementById("menu");
+            if (x.className === "MenuItems") {
+                x.className += " responsive";
+            } else {
+                x.className = "MenuItems";
+            }
+        }
+
+        /*About Us*/
+
+        function readMore() {
+            var modal = document.getElementById("pop-up1");
+            var span = document.getElementsByClassName("close")[0];
+
+
+            modal.style.display = "block";
+
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        }
+
+        function readMore1() {
+            var modal = document.getElementById("pop-up2");
+            var span = document.getElementsByClassName("close")[1];
+
+            modal.style.display = "block";
+
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        }
+
+        /* -- about-us --*/
+
+        /*Gallery*/
+        function All() {
+            const x = document.getElementsByClassName("gallery");
+            for (let i = 0; i <= x.length; i++) {
+                if (x[i].style.display === "none") {
+                    x[i].style.display = "flex";
+                }
+            }
+        }
+
+        function painting() {
+            const a = document.getElementsByClassName("one");
+            const b = document.getElementsByClassName("two");
+            const c = document.getElementsByClassName("three");
+
+            a[0].style.display = "flex";
+            b[0].style.display = "none";
+            c[0].style.display = "none";
+
+        }
+
+        function draw() {
+            const a = document.getElementsByClassName("one");
+            const b = document.getElementsByClassName("two");
+            const c = document.getElementsByClassName("three");
+
+            a[0].style.display = "none";
+            b[0].style.display = "flex";
+            c[0].style.display = "flex";
+        }
+        /*Gallery*/
+    </script>
+
+</body>
+
+</html>
