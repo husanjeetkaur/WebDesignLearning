@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Grid</title>
+
+    <style>
+        div {
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 2em 0;
+        }
+
+        .grid {
+            display: grid;
+            width: 30em;
+            height: min-content;
+            grid-template-columns: 1fr fit-content(200px) fit-content(100px);
+            grid-template-rows: repeat(2, MinMax(1fr, min-content));
+            grid-gap: 15px 20px;
+            font-size: 2em;
+
+        }
+
+        .item1 {
+            background-color: aqua;
+            grid-area: 2/3/3/4;
+        }
+
+        .item2 {
+            background-color: rgb(228, 131, 67);
+            grid-area: 2/1/3/2;
+        }
+
+        .item3 {
+            background-color: rgb(119, 80, 226);
+        }
+
+        .item4 {
+            background-color: rgb(168, 233, 48);
+        }
+
+        .item5 {
+            background-color: rgb(235, 52, 52);
+        }
+
+        .item6 {
+            background-color: rgb(235, 231, 48);
+        }
+
+        .grid1 {
+
+            display: grid;
+            grid-template-columns: repeat(3, [col-start] 1fr[col-end]);
+            grid-template-rows: [header-start]7em[header-end aside-start] 30em [aside-end message-start] 10em [message-end footer-start]5em[footer-end];
+            grid-gap: 15px 20px;
+        }
+
+        .header {
+            background-color: aqua;
+            grid-column: col-start 1/col-end 3;
+            font-size: 4em;
+
+        }
+
+        .aside {
+            background-color: rgb(228, 131, 67);
+            font-size: 2em;
+            grid-row: header-end/footer-start;
+
+        }
+
+        .p1 {
+            background-color: rgb(119, 80, 226);
+            font-size: 2em;
+
+        }
+
+        .p2 {
+            background-color: rgb(168, 233, 48);
+            font-size: 2em;
+
+        }
+
+        .message {
+            background-color: rgb(235, 52, 52);
+            font-size: 2em;
+            grid-column: col-start 2/ col-end 3;
+
+
+        }
+
+        .footer {
+            background-color: rgb(235, 231, 48);
+            font-size: 3em;
+            grid-column: col-start 1/col-end 3;
+        }
+
+        .grid2 {
+
+            display: grid;
+            grid-template-columns: repeat(3, [col-start] 1fr[col-end]);
+            grid-template-rows: 8em 10em 25em 10em 5em;
+            grid-gap: 15px 20px;
+            grid-template-areas: "header header header"
+                "aside box1 box2"
+                "aside box1 box2"
+                "aside content content"
+                "footer footer footer";
+        }
+
+        .header1 {
+            background-color: aqua;
+            font-size: 4em;
+            grid-area: header;
+        }
+
+        .aside1 {
+            background-color: rgb(228, 131, 67);
+            font-size: 2em;
+            grid-area: aside;
+        }
+
+        .box1 {
+            background-color: rgb(119, 80, 226);
+            font-size: 2em;
+            grid-area: box1;
+
+        }
+
+        .box2 {
+            background-color: rgb(168, 233, 48);
+            font-size: 2em;
+            grid-area: box2;
+
+        }
+
+        .content {
+            background-color: rgb(235, 52, 52);
+            font-size: 2em;
+            grid-area: content;
+        }
+
+        .footer1 {
+            background-color: rgb(235, 231, 48);
+            font-size: 3em;
+            grid-area: footer;
+        }
+
+        .grid3 {
+            display: grid;
+            grid-template-columns: repeat(2, 15em);
+            grid-template-rows: repeat(2, 10em);
+            color: azure;
+            width: 40em;
+            height: 40em;
+            grid-auto-rows: 5em;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .grid3 .item {
+            display: grid;
+            place-items: center center;
+        }
+
+        .grid4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-rows: repeat(3, 5em);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Item Positioning</h1>
+    <div class="grid">
+        <div class="item1">One Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit facere deserunt similique
+            perferendis sed velit, blanditiis nisi suscipit aliquam non?s</div>
+        <div class="item2">Two</div>
+        <div class="item3">Three</div>
+        <div class="item4">Four</div>
+        <div class="item5">Five</div>
+        <div class="item6">Six</div>
+    </div>
+
+    <h1>Grid Spannig & Line Naming</h1>
+    <div class="grid1">
+        <div class="header">Header</div>
+        <div class="aside">Aside</div>
+        <div class="p1">Paragraph 1</div>
+        <div class="p2">Paragraph 2</div>
+        <div class="message">Message</div>
+        <div class="footer">Footer</div>
+    </div>
+
+    <h1>Grid Area Naming</h1>
+    <div class="grid2">
+        <div class="header1">Header</div>
+        <div class="aside1">Aside</div>
+        <div class="box1">Paragraph 1</div>
+        <div class="box2">Paragraph 2</div>
+        <div class="content">Message</div>
+        <div class="footer1">Footer</div>
+    </div>
+
+    <h1>Grid Imlicit and Alignment</h1>
+    <div class="grid3">
+        <div class="item section1" style="background: rgb(111, 134, 134);">
+            <h2>One</h2>
+        </div>
+        <div class="item section2" style="background: rgb(105, 182, 90);">
+            <h2>Two</h2>
+        </div>
+        <div class="item section3" style="background: rgb(223, 109, 81);">
+            <h2>Three</h2>
+        </div>
+        <div class="item section4" style="background: rgb(83, 51, 99);">
+            <h2>Four</h2>
+        </div>
+        <div class="item section5" style="background: rgb(177, 162, 31);">
+            <h2>Five</h2>
+        </div>
+        <div class="item section6" style="background: rgb(24, 68, 68);">
+            <h2>Six</h2>
+        </div>
+        <div class="item section7" style="background: rgb(14, 63, 36);">
+            <h2>Seven</h2>
+        </div>
+        <div class="item section8" style="background: rgb(48, 24, 10);">
+            <h2>Eight</h2>
+        </div>
+    </div>
+
+    <h1>Fit content</h1>
+    <div class="grid4">
+        <div class="content1" style="background-color: brown;"></div>
+        <div class="content2" style="background-color: yellowgreen;"></div>
+        <div class="content3" style="background-color: tomato;"></div>
+        <div class="content4" style="background-color: skyblue;"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shuffle</title>
+    <style>
+        body {
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            height: 40em;
+
+        }
+
+        .shuffle {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            border: 1px solid black;
+            width: fit-content;
+        }
+
+        .item {
+            display: grid;
+            place-content: center center;
+        }
+
+        .shuffleItem {
+            border: 0;
+            margin: 1em;
+            background-color: black;
+            color: azure;
+            border-radius: 2em;
+            text-align: center;
+            padding: 1em;
+
+        }
+
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        .item {
+            width: 5rem;
+            height: 5rem;
+            border: 1px solid black;
+        }
+
+        .item1 {
+            background-color: aqua;
+        }
+
+        .item2 {
+            background-color: rgb(228, 131, 67);
+        }
+
+        .item3 {
+            background-color: rgb(119, 80, 226);
+        }
+
+        .item4 {
+            background-color: rgb(168, 233, 48);
+        }
+
+        .item5 {
+            background-color: rgb(235, 52, 52);
+        }
+
+        .item6 {
+            background-color: rgb(235, 231, 48);
+        }
+
+        .item7 {
+            background-color: rgba(255, 38, 0, 0.884);
+        }
+
+        .item8 {
+            background-color: rgb(122, 81, 53);
+        }
+
+        .item9 {
+            background-color: rgb(130, 36, 143);
+        }
+
+        .item10 {
+            background-color: rgb(78, 126, 64);
+        }
+
+        .item11 {
+            background-color: rgb(38, 114, 133);
+        }
+
+        .item12 {
+            background-color: rgb(78, 95, 189);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shuffle">
+        <div class="item item1">One</div>
+        <div class="item item2">Two</div>
+        <div class="item item3">Three</div>
+        <div class="item item4">Four</div>
+        <div class="item item5">Five</div>
+        <div class="item item6">Six</div>
+        <div class="item item7">Seven</div>
+        <div class="item item8">Eight</div>
+        <div class="item item9">Nine</div>
+        <div class="item item10">Ten</div>
+        <div class="item item11">Eleven</div>
+        <div class="item item12">Twelve</div>
+    </div>
+    <label for="box" class="shuffleItem">Shuffle</label>
+    <input type="checkbox" id="box" onclick="shuffle()" />
+    <script>
+        function shuffle() {
+            var x = document.getElementById('box');
+            document.getElementsByClassName('shuffleItem')[0].innerHTML = "Shuffled"
+            if (x.checked == true) {
+                document.getElementsByClassName('item')[0].style.order = "1";
+                document.getElementsByClassName('item')[2].style.order = "2";
+                document.getElementsByClassName('item')[3].style.order = "3";
+                document.getElementsByClassName('item')[6].style.order = "4";
+                document.getElementsByClassName('item')[5].style.order = "5";
+                document.getElementsByClassName('item')[4].style.order = "6";
+                document.getElementsByClassName('item')[1].style.order = "7";
+                document.getElementsByClassName('item')[8].style.order = "8";
+                document.getElementsByClassName('item')[10].style.order = "9";
+                document.getElementsByClassName('item')[12].style.order = "10";
+                document.getElementsByClassName('item')[11].style.order = "11";
+            } else {
+                for (let i = 0; i <= 12; i++) {
+                    document.getElementsByClassName('item')[i].style.order = "0";
+                    document.getElementsByClassName('shuffleItem')[0].innerHTML = "Shuffle Again"
+
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
