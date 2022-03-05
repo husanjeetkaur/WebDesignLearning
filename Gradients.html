@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradients</title>
+
+    <style>
+        .gradient {
+            height: 80vh;
+            width: 100%;
+        }
+
+        .linear {
+            height: 50%;
+            width: 50%;
+            border: 1px solid black;
+            background: repeating-linear-gradient(to right bottom, red, red 10%, yellow, yellow 30%);
+        }
+
+        .radical {
+            height: 50%;
+            width: 50%;
+            border: 1px solid black;
+            background: radial-gradient(farthest-corner at 10% 19%, navy, darkgreen);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gradient">
+        <div class="linear"></div>
+        <div class="radical"></div>
+    </div>
+</body>
+
+</html>
