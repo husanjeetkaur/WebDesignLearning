@@ -175,6 +175,17 @@
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             grid-template-rows: repeat(3, 5em);
         }
+
+        .grid5 {
+            display: grid;
+            width: 300px;
+            grid-template-columns: repeat(2, 150px);
+            grid-template-rows: repeat(2, 150px);
+        }
+
+        .content1 {
+            max-width: 150px;
+        }
     </style>
 </head>
 
@@ -244,6 +255,23 @@
         <div class="content2" style="background-color: yellowgreen;"></div>
         <div class="content3" style="background-color: tomato;"></div>
         <div class="content4" style="background-color: skyblue;"></div>
+    </div>
+
+
+    <h1>Overlapping</h1>
+    <div class="grid5">
+        <div class="content1 one"
+            style="background-color: rgb(77, 46, 46); grid-column: 1/span 2; grid-row: 1/ span 2; align-self: start;">
+            One Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, nesciunt. ipsum dolor sit amet
+            consectetur adipisicing elit. Corporis, illo.</div>
+        <div class="content1 two"
+            style="background-color: rgb(36, 87, 100);grid-column: 1/span 2; grid-row: 1/ span 2; align-self: center;justify-self: center;">
+            Two Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, exercitationem. ipsum dolor sit amet
+            consectetur adipisicing elit. Excepturi, maiores?</div>
+        <div class="content1 three"
+            style="background-color: rgb(163, 165, 42); grid-column: 1/span 2; grid-row: 1/ span 2; align-self: end; justify-self: end;">
+            Three Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, amet? ipsum dolor sit amet
+            consectetur, adipisicing elit. Consequatur, ducimus.</div>
     </div>
 </body>
 

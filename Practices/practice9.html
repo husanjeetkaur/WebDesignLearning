@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice9</title>
+
+    <style>
+        body {
+            display: grid;
+            place-content: center center;
+            background-color: rgb(76, 82, 88);
+        }
+
+        .hover {
+            display: grid;
+            grid-template-columns: repeat(2, 15em);
+            grid-template-rows: repeat(2, 15em);
+        }
+
+        .item {
+            max-width: 15em;
+            padding: 2em;
+            border: 1px solid black;
+        }
+
+        .item1 {
+            background-color: rgb(119, 119, 0);
+            color: rgb(65, 65, 65);
+            grid-column: 1/span 2;
+            grid-row: 1/span 2;
+            align-self: start;
+            z-index: 0;
+            outline: 2px ridge black;
+            transition: 500ms all ease;
+        }
+
+        .item1:hover {
+            z-index: 1;
+        }
+
+        .item2 {
+            z-index: 0;
+            background-color: rgb(119, 102, 136);
+            grid-column: 1/span 2;
+            grid-row: 1/span 2;
+            align-self: center;
+            justify-self: center;
+
+        }
+
+        .item2:hover {
+            z-index: 1;
+        }
+
+        .item3 {
+            z-index: 0;
+
+            background-color: rgb(45, 74, 117);
+            color: azure;
+            grid-column: 1/span 2;
+            grid-row: 1/span 2;
+            align-self: end;
+            justify-self: end;
+        }
+
+        .item3:hover {
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hover">
+        <div class="item item1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quis maiores eaque
+            eligendi mollitia dolores eius voluptate distinctio consequatur. Distinctio. ipsum dolor, sit amet
+            consectetur adipisicing elit. Soluta, voluptate error! Culpa
+            illo magni perferendis exercitationem nobis reprehenderit cumque quo?</div>
+        <div class="item item2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab rem labore officiis aliquid
+            expedita non accusantium nisi molestiae maiores culpa architecto numquam nobis minima inventore repudiandae
+            at, omnis deserunt natus fugit consequuntur libero nam beatae! Rerum nobis sequi perspiciatis quae.</div>
+        <div class="item item3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus quisquam veritatis
+            ratione temporibus ea iure pariatur, eius, quibusdam distinctio ut incidunt ab dicta quia molestias quae
+            commodi deleniti voluptates dolorum quaerat provident esse aspernatur totam? Optio voluptate alias officiis.
+            Repellendus.</div>
+    </div>
+</body>
+
+</html>
