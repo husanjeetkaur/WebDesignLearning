@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Fuctions</title>
+
+    <style>
+        .main {
+            display: grid;
+            justify-content: center;
+            text-align: center;
+            counter-reset: heading;
+            counter-reset: Paragraph;
+        }
+
+        .item1 img {
+            width: clamp(100px, 100%, 600px);
+        }
+
+        .item2 img {
+            width: min(300px, 70%);
+        }
+
+        .item3 img {
+            width: max(300px, 80%)
+        }
+
+        button {
+            position: relative;
+        }
+
+        button::after {
+
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 20px;
+            background-color: black;
+            color: white;
+            width: fit-content;
+            transform: translateX(0);
+            transition: 150ms transform;
+            transform-origin: bottom center;
+        }
+
+        button:hover::after {
+            content: "("attr(data)")";
+            transform: translateY(10px);
+
+
+        }
+
+        #counterFunction h1::before {
+            counter-increment: heading;
+            -webkit-counter-increment: heading;
+            content: "heading "counter(heading)" : ";
+
+        }
+
+        #counterFunction p::before {
+            counter-increment: Paragraph;
+            -webkit-counter-increment: Paragraph;
+            content: "Paragraph "counter(Paragraph)" : ";
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="item item1">
+            <h1>Heading</h1>
+            <img src="/Images/dog.jpg" alt="">
+        </div>
+        <div class="item item2">
+            <h1>Heading</h1>
+            <img src="/Images/1.jpg" alt="">
+
+        </div>
+        <div class="item item3">
+            <h1>Heading</h1>
+            <img src="/Images/wolfdrawing.jpg" alt="">
+
+        </div>
+    </div>
+
+
+    <div class="main">
+        <h1>Other Functions</h1>
+
+        <button type="button" data="Hello there! I am using attr() function">Hover over me</button>
+
+        <div id="counterFunction">
+            <h1>Hello</h1>
+            <h1>Hello</h1>
+            <h1>Hello</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, omnis.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ducimus!</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, voluptate.</p>
+        </div>
+    </div>
+</body>
+
+</html>
