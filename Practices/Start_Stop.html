@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Start and Stop</title>
+</head>
+
+<body>
+    <button>Start Machine</button>
+    <p>The machine has stopped</p>
+
+
+    <script>
+        let btn = document.querySelector('button');
+        let txt = document.querySelector('p');
+
+        btn.addEventListener('click', updateBtn);
+
+        function updateBtn() {
+            if (btn.textContent === "Start Machine") {
+                btn.textContent = "Stop Machine";
+                txt.textContent = "The machine has started";
+            } else {
+                btn.textContent = "Start Machine";
+                txt.textContent = "The machine has  stopped";
+            }
+
+        }
+    </script>
+</body>
+
+</html>

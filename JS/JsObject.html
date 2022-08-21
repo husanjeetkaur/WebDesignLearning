@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Object-oriented JavaScript example</title>
+</head>
+
+<body>
+    <p>This example requires you to enter commands in your browser's JavaScript console (see <a
+            href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What
+            are browser developer tools</a> for more information).</p>
+
+</body>
+
+<script>
+    const person = {
+        name: ['H', 'K'],
+        age: "26",
+        bio: function () {
+            console.log(`${this.name[0]}${this.name[1]} is ${this.age} years old`);
+        },
+        introduceSelf: function () {
+            console.log(`Hi! I am ${this.name[0]}`);
+        }
+    }
+
+    // Printing name Using Function where we have to create new empty obj every time
+    const husan = createPerson('Husan');
+    husan.name;
+    husan.introduce();
+
+    function createPerson(name) {
+
+        const obj = {};
+        obj.name = name;
+        obj.introduce = function () {
+            console.log(`Hi! I am ${this.name}.`);
+        }
+        return obj;
+    }
+    //
+
+    // Using Constuctor
+    function Person(name) {
+
+        this.name = name;
+        this.introduction = function () {
+            console.log(`Hi! I am ${this.name}`);
+        }
+    }
+
+    const aman = new Person('AMAN');
+    aman.name;
+    aman.introduction();
+</script>
+
+</html>

@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>Math Table</title>
+</head>
+
+<body>
+
+
+    <label for="number">Enter a Number:</label>
+    <input id="number" type="text">
+    <button id="calculate">Calculate</button>
+    <button id="clear">Clear</button>
+
+
+    <p></p></br>
+
+    <script>
+        const calculate = document.getElementById('calculate');
+        const clear = document.getElementById('clear');
+        let para = document.querySelector('p');
+        let num = document.querySelectorAll('input').innerHTML;
+        num = Number(num);
+
+        function calculateMath() {
+            console.log(num);
+
+            for (let i = 1; i <= 10; i++) {
+                const table = `${'5'} X ${i} = ${5 * i}`
+                para.textContent += `${table}\r\n`;
+
+            }
+        }
+
+        calculate.addEventListener('click',
+            calculateMath);
+
+        clear.addEventListener('click', () => para.textContent = '');
+    </script>
+</body>
+
+</html>

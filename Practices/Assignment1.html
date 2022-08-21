@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>Assignment1</title>
+</head>
+
+<body>
+
+    <h1>
+    </h1>
+    <p></p>
+
+    <script>
+        let num1 = 12;
+        let num2 = 11;
+        let num3 = 15;
+        let num4 = 48;
+
+
+        resultAdd = num1 + num2;
+        resultSub = num4 - num3;
+        const para = document.querySelector('h1');
+
+        finalResult = resultAdd * resultSub;
+
+        const checkNum = finalResult === 48 ? `Great!` : `No, It is ${finalResult} `;
+
+
+        para.textContent = `Is the number 48 ? ${checkNum}`
+
+        const para1 = document.querySelector('p');
+        const evenOdd = finalResult % 2;
+        const evenOddResult = evenOdd === 0 ? `${finalResult} is Even number` : `
+        ${finalResult} is Odd number`;
+
+        para1.textContent = evenOddResult;
+    </script>
+</body>
+
+</html>

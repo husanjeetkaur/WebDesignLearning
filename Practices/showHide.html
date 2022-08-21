@@ -1,0 +1,34 @@
+<html>
+<title>Show Hide Text</title>
+
+<head>
+
+</head>
+
+<body>
+    <button id="Show">Show the Text</button>
+    <button id="Hide">Hide the Text</button>
+    <p></p>
+</body>
+
+<script>
+    const show = document.getElementById('Show');
+    const hide = document.getElementById('Hide');
+    let para = document.querySelector('p');
+
+    const controller = new AbortController();
+
+
+    show.addEventListener('click', () => {
+        para.textContent = "This is a para";
+    }, {
+        signal: controller.signal
+    });
+
+    function ab() {
+        controller.abort();
+    }
+    hide.addEventListener('click', ab);
+</script>
+
+</html>

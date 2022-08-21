@@ -1,0 +1,53 @@
+<html>
+
+<body>
+    <title>Random Background Color</title>
+    <style>
+        .tle {
+            height: 100px;
+            width: 25%;
+            float: left;
+        }
+    </style>
+</body>
+<div class="container">
+
+    <div class="tle"></div>
+    <div class="tle"></div>
+    <div class="tle"></div>
+    <div class="tle"></div>
+    <div class="tle"></div>
+    <div class="tle"></div>
+    <div class="tle"></div>
+    <div class="tle"></div>
+    <div class="tle"></div>
+    <div class="tle"></div>
+    <div class="tle"></div>
+    <div class="tle"></div>
+    <div class="tle"></div>
+    <div class="tle"></div>
+    <div class="tle"></div>
+    <div class="tle"></div>
+    <div class="tle"></div>
+    <div class="tle"></div>
+    <div class="tle"></div>
+    <div class="tle"></div>
+
+</div>
+
+<script>
+    const container = document.querySelector('.container');
+
+    function random(number) {
+        return Math.floor(Math.random() * (number + 1));
+    }
+
+    function bgChange(e) {
+        const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+        e.target.style.backgroundColor = rndCol;
+        console.log(e);
+    }
+    container.addEventListener('click', bgChange);
+</script>
+
+</html>

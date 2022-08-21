@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltip</title>
+
+    <style>
+        .main {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80vh;
+        }
+
+        .main h2 {
+            background-color: aquamarine;
+            padding: 1rem;
+        }
+
+        .top {
+            position: relative;
+        }
+
+        .top .top-tooltip {
+            position: absolute;
+            content: '';
+            top: -20px;
+            left: 0;
+            transform: translateY(-30px);
+            border-radius: 10px;
+            width: fit-content;
+            background-color: black;
+            color: white;
+            padding: 0.2rem;
+        }
+
+        .top .top-tooltip::before {}
+    </style>
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="top">
+            <h2>Top <span class="top-tooltip">Top-tooltip</span></h2>
+        </div>
+        <div class="bottom">
+            <h2>Bottom <span class="bottom-tooltip ">Bottom-tooltip</span></h2>
+        </div>
+        <div class="left">
+            <h2>Left <span class="left-tooltip">Left-tooltip</span></h2>
+        </div>
+        <div class="right">
+            <h2>Right <span class="right-tooltip">Right-tooltip</span></h2>
+        </div>
+    </div>
+</body>
+
+</html>

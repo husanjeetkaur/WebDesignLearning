@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <title>Setting Simple alaram</title>
+</head>
+
+<body>
+    <input type="text" id="name"> <br /> <br />
+    <input type="text" id="delay"> <br /><br />
+    <button>Set Alarm! </button> <br /><br />
+    <div id="output"></div>
+
+    <script>
+        const name = document.getElementById('name');
+        const delay = document.getElementById('delay');
+        const btn = document.querySelector('button');
+        const output = document.getElementById('output');
+
+        function alaram(person, delay) {
+            return new Promise((resolve, reject) => {
+                if (delay < 0) {
+                    throw new Error('Alaram delay must not be in negative number');
+                }
+                setTimeout(() => {
+                    resolve(`Wake Up! ${person}`);
+                }, delay);
+            });
+        }
+
+        /*  USING promise
+         btn.addEventListener('click', () => {
+             alaram(name.value, delay.value)
+                 .then((message) => output.textContent = message)
+                 .catch((err) => output.textContent = `Couldn't set alaram ${err}`);
+
+         }); */
+
+
+
+        // Using async and await
+
+        btn.addEventListener('click', async () => {
+            try {
+                const message = await alaram(name.value, delay.value);
+                output.textContent = message;
+            } catch (error) {
+                output.textContent = `Couldn;t set alarm ${error}`;
+            }
+        });
+    </script>
+</body>
+
+</html>
